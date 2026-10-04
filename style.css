@@ -1,0 +1,118 @@
+:root {
+  --azul: #05264c;
+  --naranja: #ff6414;
+  --crema: #fff5df;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--azul); font-family: 'Montserrat', Arial, sans-serif; }
+
+.navbar {
+  min-height: 116px;
+  padding: 16px 4.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: white;
+}
+
+/* Logotipo original, completo y sin repetición. */
+.logo {
+  display: block;
+  flex: 0 0 290px;
+  width: 290px;
+  height: 80px;
+  background: url('img/logotipo-01.png') no-repeat center / contain;
+}
+nav { display: flex; align-items: center; gap: clamp(24px, 3.2vw, 65px); }
+nav a { text-decoration: none; font-size: clamp(12px, .95vw, 18px); font-weight: 800; color: #191b29; white-space: nowrap; }
+nav a:hover { color: var(--naranja); }
+a:focus-visible { outline: 3px solid var(--azul); outline-offset: 5px; }
+
+.hero {
+  position: relative;
+  min-height: 710px;
+  height: clamp(710px, 44vw, 1050px);
+  background: url('img/heroAcamari.png') no-repeat right center / cover;
+  padding: clamp(65px, 6.2vw, 140px) 7.1% 32px;
+  display: flex;
+  align-items: center;
+}
+.hero-columna { width: 35.5%; max-width: 680px; }
+.tarjeta {
+  padding: clamp(38px, 4vw, 82px);
+  border-radius: 80px;
+  background: rgba(255, 251, 237, .78);
+  box-shadow: 0 12px 30px rgba(65, 48, 20, .25);
+}
+h1 { margin: 0; font-size: clamp(38px, 3.35vw, 80px); font-weight: 900; letter-spacing: -.04em; line-height: .99; }
+.tarjeta p { margin: 30px 0 52px; font-size: clamp(16px, 1.15vw, 27px); font-weight: 500; line-height: 1.25; }
+.boton-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 auto;
+  padding: 18px 26px;
+  width: 88%;
+  min-height: 82px;
+  border-radius: 42px;
+  background: var(--naranja);
+  color: white;
+  text-decoration: none;
+  font-size: clamp(20px, 1.6vw, 36px);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.boton-demo:hover { background: #e95007; }
+.play { display: grid; place-items: center; width: 56px; height: 56px; flex-shrink: 0; border-radius: 50%; background: white; }
+.play::after { content: ''; margin-left: 5px; border-left: 23px solid var(--naranja); border-top: 16px solid transparent; border-bottom: 16px solid transparent; }
+.sellos { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin: 42px 24px 0; }
+.sello { display: flex; align-items: center; gap: 8px; }
+.sello img { width: clamp(34px, 2.65vw, 60px); height: auto; }
+.sello span { font-size: clamp(10px, .78vw, 17px); font-weight: 700; line-height: 1.08; }
+.imagen-movil { display: none; }
+
+/* Avisos temporales, no forman parte del diseño del hero. */
+.aviso { display: none; position: fixed; inset: 0; z-index: 5; padding: 24px; background: #05264cb3; align-items: center; justify-content: center; }
+.aviso:target { display: flex; }
+.aviso>div { max-width: 480px; padding: 32px; background: var(--crema); border-radius: 20px; }
+.aviso a { color: var(--azul); }
+
+@media (max-width: 1200px) {
+  .navbar { min-height: 95px; gap: 20px; }
+  nav { gap: 24px; }
+  .hero-columna { width: 43%; }
+  .tarjeta { border-radius: 50px; padding: 40px; }
+  .sellos { margin: 32px 0 0; }
+  .boton-demo { width: 100%; gap: 16px; }
+}
+
+/* En móvil se separa el texto y la ilustración para evitar recortar personajes. */
+@media (max-width: 800px) {
+  .navbar { flex-direction: column; gap: 14px; padding: 14px 20px 22px; }
+  nav { flex-wrap: wrap; justify-content: center; gap: 14px 22px; }
+  nav a { font-size: 12px; }
+  .logo { flex: none; }
+  .hero { display: block; height: auto; min-height: 0; padding: 28px 0 0; background: var(--crema); }
+  .hero-columna { width: auto; max-width: 600px; margin: auto; padding: 0 20px; }
+  .tarjeta { padding: 30px; border-radius: 32px; box-shadow: 0 6px 20px #41301412; }
+  h1 { font-size: clamp(36px, 7vw, 56px); }
+  .tarjeta p { font-size: 17px; margin: 24px 0 30px; line-height: 1.4; }
+  .boton-demo { font-size: 23px; min-height: 66px; padding: 12px 20px; }
+  .play { width: 42px; height: 42px; }
+  .play::after { border-left-width: 17px; border-top-width: 12px; border-bottom-width: 12px; }
+  .sellos { margin: 28px 0; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .sello { padding: 5px; }
+  .sello span { font-size: 10px; }
+  .sello img { width: 36px; }
+  /* Encuadre móvil: conserva toda la altura y recorta el paisaje izquierdo.
+     El grupo está en el lado derecho de la imagen original. */
+  .imagen-movil {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: url('img/heroAcamari.png') no-repeat 94% center / cover;
+  }
+}
