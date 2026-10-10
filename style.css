@@ -116,3 +116,124 @@ h1 { margin: 0; font-size: clamp(38px, 3.35vw, 80px); font-weight: 900; letter-s
     background: url('img/heroAcamari.png') no-repeat 94% center / cover;
   }
 }
+
+/* FASE 3. Estilos exclusivos del contenido nuevo. El hero original se conserva. */
+.fase3-contenedor{width:min(1160px,calc(100% - 48px));margin-inline:auto}
+.fase3-seccion{padding:88px 0;scroll-margin-top:24px}
+.fase3-seccion h2{font-size:clamp(30px,4vw,52px);font-weight:900;letter-spacing:-.035em;line-height:1.12;margin:14px 0 24px}
+.fase3-etiqueta{font-size:13px;font-weight:800;letter-spacing:.12em;color:#ad3900;margin:0}
+.fase3-intro{font-size:18px;line-height:1.75;max-width:770px;margin:0 0 38px}
+.fase3-seccion h3{font-size:22px;line-height:1.3;margin:12px 0}
+.fase3-seccion article p{font-size:16px;line-height:1.7;margin:0;color:#38526d}
+.fase3-valores{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:48px}
+.fase3-valores article{border-top:3px solid var(--naranja);padding-top:22px}
+.fase3-numero{font-size:14px;font-weight:800;color:#ad3900}
+.fase3-contenido{background:#edf5fd}
+.fase3-niveles,.fase3-escuelas-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.fase3-niveles article{padding:30px;background:white;border-radius:22px;border:1px solid #d9e6f3;box-shadow:0 8px 24px #05264c08}
+.fase3-subtitulo{margin:48px 0 24px!important}
+.fase3-modulos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.fase3-modulos article{background:white;border:1px solid #d9e6f3;border-radius:18px;padding:24px;transition:transform .2s,box-shadow .2s}
+.fase3-modulos article:hover{transform:translateY(-4px);box-shadow:0 12px 24px #05264c14}
+.fase3-modulos article>span{font-size:14px;font-weight:800;color:#ad3900}
+.fase3-ruta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;padding:30px 0 0 22px;margin:30px 0 0;border-top:1px solid #bdd3e8}
+.fase3-ruta li{padding-left:4px;font-size:16px;line-height:1.6}
+.fase3-ruta strong,.fase3-ruta span{display:block}
+.fase3-ruta strong{margin-bottom:8px}
+.fase3-escuelas-grid{margin:40px 0}
+.fase3-escuelas-grid article{padding:28px;background:var(--crema);border-radius:20px}
+.fase3-boton{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:16px 28px;border-radius:32px;color:white;background:#c84300;text-decoration:none;font-size:16px;font-weight:800;transition:background .2s,transform .2s}
+.fase3-boton:hover{background:#a73600;transform:translateY(-2px)}
+.fase3-demo{background:var(--crema)}
+.fase3-actividad{max-width:770px;border:1px solid #d6c7a7;border-radius:16px;background:white;padding:22px;font-size:16px;line-height:1.7}
+.fase3-actividad summary{cursor:pointer;font-weight:800}
+.fase3-actividad summary:focus-visible{outline:3px solid var(--azul);outline-offset:5px}
+.fase3-nota{font-size:14px;line-height:1.6;max-width:770px;margin-top:22px;color:#38526d}
+.fase3-contacto{background:var(--azul);color:white}
+.fase3-contacto .fase3-etiqueta{color:#ffc793}
+.fase3-footer{padding:36px 0;background:white}
+.fase3-footer>.fase3-contenedor{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.fase3-footer nav{display:flex;flex-wrap:wrap;gap:18px}
+.fase3-footer nav a{font-size:14px;white-space:normal}
+.fase3-footer small{font-size:13px}
+@media(max-width:900px){.fase3-valores{grid-template-columns:repeat(2,minmax(0,1fr))}.fase3-niveles,.fase3-escuelas-grid{gap:16px}.fase3-niveles article,.fase3-escuelas-grid article{padding:22px}}
+@media(max-width:650px){.fase3-seccion{padding:56px 0}.fase3-contenedor{width:calc(100% - 36px)}.fase3-intro{font-size:16px}.fase3-niveles,.fase3-modulos,.fase3-escuelas-grid,.fase3-ruta{grid-template-columns:1fr}.fase3-valores{gap:22px}.fase3-seccion h3{font-size:20px}.fase3-footer>.fase3-contenedor{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){.fase3-boton,.fase3-modulos article{transition:none}.fase3-boton:hover,.fase3-modulos article:hover{transform:none}}
+
+/* Encuadre de escritorio según la referencia de Arturo.
+   La altura anterior de 710px hacía que cover ampliara y recortara el fondo. */
+@media (min-width: 1201px) {
+  .hero {
+    min-height: 650px;
+    height: clamp(650px, 44vw, 1050px);
+  }
+}
+
+/* Recorrido narrativo: exclusivo de Contenido, sin afectar el hero. */
+.fase3-viaje{background:#fff6e7}
+.viaje-layout{display:grid;grid-template-columns:minmax(240px,.75fr) minmax(0,2fr);gap:40px;align-items:start;width:min(1440px,calc(100% - 72px))}
+.viaje-presentacion h2{font-size:clamp(28px,3vw,43px)}
+.viaje-presentacion .fase3-intro{font-size:16px;line-height:1.65;margin-bottom:22px}
+.viaje-indicacion{font-size:14px;color:#526579;line-height:1.5}
+.viaje-pestanas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:18px}
+.viaje-pestana{position:relative;display:flex;align-items:center;gap:10px;padding:12px 14px 0 6px;min-height:124px;border:2px solid transparent;border-radius:22px;background:#ffe5a4;color:var(--azul);font:inherit;text-align:left;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.viaje-pestana.nivel-2{background:#d9f1ff}.viaje-pestana.nivel-3{background:#ede0ff}
+.viaje-pestana img{width:43%;height:110px;object-fit:contain;object-position:bottom;align-self:flex-end}
+.viaje-pestana>span{padding-bottom:12px;flex:1;min-width:0}
+.viaje-pestana strong{display:block;font-size:20px;line-height:1.2;margin-bottom:6px}
+.viaje-pestana span span{display:block;font-size:14px;line-height:1.45}
+.viaje-pestana[aria-selected=true]{border-color:#efad25;box-shadow:0 6px 18px #a36c0015}
+.viaje-pestana.nivel-2[aria-selected=true]{border-color:#1780b9}.viaje-pestana.nivel-3[aria-selected=true]{border-color:#8251c2}
+.viaje-pestana[aria-selected=true]:after{content:'';position:absolute;bottom:-9px;left:50%;width:14px;height:14px;transform:rotate(45deg);background:inherit;border-right:2px solid #efad25;border-bottom:2px solid #efad25}
+.viaje-pestana.nivel-2:after{border-color:#1780b9}.viaje-pestana.nivel-3:after{border-color:#8251c2}
+.viaje-pestana:hover{transform:translateY(-3px)}
+.viaje-pestana:focus-visible,.viaje-panel:focus-visible{outline:3px solid var(--azul);outline-offset:5px}
+.viaje-panel{padding:26px;border-radius:24px;background:white;box-shadow:0 12px 32px #8c601012;border:1px solid #eee4d4}
+.viaje-panel[hidden]{display:none}
+.viaje-cabecera{display:flex;align-items:start;gap:22px;margin-bottom:26px}
+.viaje-cabecera h3{font-size:17px;margin:0;flex:1;line-height:1.5}
+.viaje-cabecera h3 span{display:block;font-size:24px;margin-bottom:4px}
+.viaje-cabecera p{font-size:14px;line-height:1.65;flex:1.3;margin:0;color:#38526d}
+.viaje-cantidad{font-size:14px;font-weight:800;white-space:nowrap}
+.viaje-recorrido{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.viaje-recorrido li{display:flex;align-items:center;gap:12px;padding:16px 12px;background:#f7f9fc;border-radius:16px;position:relative}
+.viaje-recorrido li:not(:nth-child(3n)):after{content:'';position:absolute;right:-14px;top:50%;width:14px;height:3px;background:#d4dfeb}
+.viaje-paso{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:#ffbd24;font-size:22px;font-weight:800;color:#05264c}
+.paso-2{background:#ff885a}.paso-3{background:#ff97d3}.paso-4{background:#c6a7ff}.paso-5{background:#7dceff}.paso-6{background:#77d9a6}
+.viaje-recorrido h4{font-size:14px;line-height:1.45;margin:0;overflow-wrap:anywhere}
+.viaje-metodo{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:22px;padding-top:18px;border-top:1px solid #e9edf3;color:#526579;font-size:13px;line-height:1.6}
+@media(min-width:1650px){.viaje-layout{width:calc(100% - 100px);max-width:1800px;grid-template-columns:.7fr 2fr}.viaje-recorrido{grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}.viaje-recorrido li:not(:last-child):after{content:'';position:absolute;right:-12px;top:50%;width:12px;height:3px;background:#d4dfeb}.viaje-recorrido li{padding:14px 10px;gap:8px}.viaje-paso{width:40px;height:40px;flex-basis:40px}}
+@media(max-width:1050px){.viaje-layout{grid-template-columns:1fr;width:calc(100% - 48px);gap:20px}.viaje-presentacion h2 br{display:none}.viaje-presentacion .fase3-intro{max-width:720px}}
+@media(max-width:600px){.viaje-layout{width:calc(100% - 36px)}.viaje-pestanas{gap:8px}.viaje-pestana{flex-direction:column;gap:4px;padding:6px;min-height:174px;border-radius:16px;text-align:center}.viaje-pestana img{width:100%;height:82px;align-self:center;order:0}.viaje-pestana>span{padding:0 0 8px}.viaje-pestana strong{font-size:16px}.viaje-pestana span span{font-size:12px}.viaje-panel{padding:20px}.viaje-cabecera{flex-wrap:wrap;gap:12px}.viaje-cabecera h3{flex-basis:100%}.viaje-cabecera p{flex-basis:100%}.viaje-recorrido{grid-template-columns:1fr;gap:14px}.viaje-recorrido li:not(:last-child):after{content:'';position:absolute;width:3px;height:14px;left:33px;top:100%;right:auto}.viaje-recorrido li:last-child:after{display:none}.viaje-recorrido h4{font-size:16px}.viaje-metodo{flex-direction:column;gap:8px}}
+@media(prefers-reduced-motion:reduce){.viaje-pestana{transition:none}.viaje-pestana:hover{transform:none}}
+
+/* Escuelas: tarjetas con iconos y acción central. */
+.fase3-escuelas{background:linear-gradient(180deg,#fff 0%,#edf6ff 100%)}
+.fase3-escuelas>.fase3-contenedor>.fase3-etiqueta,.fase3-escuelas h2{text-align:center}
+.fase3-escuelas>.fase3-contenedor>.fase3-intro{text-align:center;margin-inline:auto}
+.fase3-escuelas-grid{gap:26px;margin:44px 0 40px}
+.fase3-escuelas-grid article{position:relative;padding:34px 28px;border:1px solid #d8e5f2;border-top:5px solid #e9a319;border-radius:24px;background:#fffaf0;box-shadow:0 12px 30px #05264c0d;transition:transform .22s,box-shadow .22s}
+.fase3-escuelas-grid article:nth-child(2){background:#eff8ff;border-top-color:#2382bd}
+.fase3-escuelas-grid article:nth-child(3){background:#f5f0ff;border-top-color:#8861bb}
+.escuela-icono{display:grid;place-items:center;width:64px;height:64px;border-radius:20px;background:#ffe5ab;color:#775006;margin-bottom:24px;box-shadow:0 5px 12px #7750060b}
+.escuela-icono svg{width:36px;height:36px}
+.fase3-escuelas-grid article:nth-child(2) .escuela-icono{background:#cfeeff;color:#12658e}
+.fase3-escuelas-grid article:nth-child(3) .escuela-icono{background:#e8d9ff;color:#684399}
+.fase3-escuelas-grid article h3{margin-bottom:16px}
+.fase3-escuelas-grid article:hover{transform:translateY(-6px);box-shadow:0 18px 38px #05264c18}
+.escuelas-accion{display:flex;justify-content:center;margin-top:12px}
+.escuelas-accion .fase3-boton{min-width:240px;box-shadow:0 8px 20px #c8430026}
+@media(max-width:650px){.fase3-escuelas-grid{gap:20px}.fase3-escuelas-grid article{padding:28px}.escuelas-accion .fase3-boton{width:100%;max-width:340px}}
+@media(prefers-reduced-motion:reduce){.fase3-escuelas-grid article{transition:none}.fase3-escuelas-grid article:hover{transform:none}}
+
+/* Contacto: canales en lugar de botón personal. */
+.fase3-contacto{text-align:center}
+.fase3-contacto .fase3-intro{margin-inline:auto}
+.contacto-canales{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-top:36px}
+.contacto-canal{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:140px;min-height:126px;padding:18px;border:1px solid #ffffff55;border-radius:22px;background:#ffffff0d;color:white;font:inherit;font-size:15px;font-weight:700;text-decoration:none;transition:background .2s,transform .2s}
+.contacto-canal svg{width:38px;height:38px;stroke-linecap:round;stroke-linejoin:round}
+.contacto-canal[href]:hover{background:#ffffff22;transform:translateY(-4px)}
+.contacto-canal:focus-visible{outline:3px solid #ffc793;outline-offset:5px}
+.contacto-pendiente{opacity:.6;cursor:default}
+@media(max-width:450px){.contacto-canales{gap:12px}.contacto-canal{width:calc((100% - 24px)/3);min-height:112px;padding:12px 6px;font-size:13px}}
+@media(prefers-reduced-motion:reduce){.contacto-canal{transition:none}.contacto-canal[href]:hover{transform:none}}
