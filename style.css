@@ -237,3 +237,21 @@ h1 { margin: 0; font-size: clamp(38px, 3.35vw, 80px); font-weight: 900; letter-s
 .contacto-pendiente{opacity:.6;cursor:default}
 @media(max-width:450px){.contacto-canales{gap:12px}.contacto-canal{width:calc((100% - 24px)/3);min-height:112px;padding:12px 6px;font-size:13px}}
 @media(prefers-reduced-motion:reduce){.contacto-canal{transition:none}.contacto-canal[href]:hover{transform:none}}
+
+/* Fase 4 */
+.fase4-ritmo { padding: 32px 0 48px; background: #fff7e8; }
+.ritmo-contenedor { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.ritmo-contenedor h3 { margin: 0 0 8px; font-size: 24px; }
+.ritmo-contenedor p { line-height: 1.5; }
+.ritmo-controles { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+#contador-pulsos { min-width: 64px; margin: 0; text-align: center; font-size: 40px; }
+.ritmo-controles button { border: 0; border-radius: 24px; padding: 14px 20px; min-height: 48px; cursor: pointer; font: 700 14px 'Montserrat', Arial, sans-serif; }
+#boton-pulso { background: var(--naranja); color: var(--azul); }
+#reiniciar-pulsos { background: #e6eaf0; color: var(--azul); }
+.ritmo-controles button:focus-visible { outline: 3px solid var(--azul); outline-offset: 4px; }
+/* Si AOS no carga, el contenido permanece visible. */
+html:not(.aos-disponible) [data-aos] { opacity: 1 !important; transform: none !important; }
+@media (max-width: 800px) { .ritmo-contenedor { flex-direction: column; align-items: flex-start; } }
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
