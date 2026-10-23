@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Academia Mariachitos</title>
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="vendor/aos/aos.css">
-  <link rel="stylesheet" href="style.css?v=fase4-20261015">
+  <link rel="stylesheet" href="style.css?v=fase5-20261020">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar">
+  <header class="navbar navbar-expand-lg mariachitos-navbar">
     <a class="logo" href="#inicio" aria-label="Academia Mariachitos, inicio"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar menú"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
     <nav aria-label="Menú principal">
       <a href="#conoce">Conoce Academia Mariachitos</a>
       <a href="#contenido">Contenido</a>
       <a href="#escuelas">Escuelas</a>
       <a href="#contacto">Contacto</a>
     </nav>
+    </div>
   </header>
 
   <main>
@@ -82,10 +86,10 @@
       <div class="fase3-contenedor">
         <p class="fase3-etiqueta">PARA ESCUELAS</p><h2 id="escuelas-titulo" data-aos="fade-up">La aventura también<br>se vive en el salón.</h2>
         <p class="fase3-intro">Una propuesta de iniciación musical para acompañar a docentes y grupos de educación infantil.</p>
-        <div class="fase3-escuelas-grid">
-          <article><span class="escuela-icono" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h8a5 5 0 0 1 5 5v10h-8a5 5 0 0 0-5 2V6Z"/><path d="M8 6H5v15h3M13 10h4M13 14h4"/></svg></span><h3>Oferta de valor</h3><p>Narrativa, música y juego en un mismo recorrido para despertar la curiosidad y la participación.</p></article>
-          <article><span class="escuela-icono" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 23v-6a4 4 0 0 1 4-4h6a4 4 0 0 0 0-8h-1"/><circle cx="5" cy="23" r="2"/><path d="m10 3 4 2-4 2M19 23v-7M16 19l3-3 3 3"/></svg></span><h3>Ruta pedagógica</h3><p>Contenidos por niveles y módulos para organizar sesiones y acompañar distintos ritmos de aprendizaje.</p></article>
-          <article><span class="escuela-icono" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 11-6 11 6-11 6-11-6Z"/><path d="M7 13v7c4 3 10 3 14 0v-7M25 10v9"/></svg></span><h3>Licencias institucionales</h3><p>La implementación para colegios se define según sus grupos y necesidades. Consulta la propuesta para tu institución.</p></article>
+        <div class="fase3-escuelas-grid row row-cols-1 row-cols-md-3 g-4">
+          <div class="col"><article class="h-100"><span class="escuela-icono" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h8a5 5 0 0 1 5 5v10h-8a5 5 0 0 0-5 2V6Z"/><path d="M8 6H5v15h3M13 10h4M13 14h4"/></svg></span><h3>Oferta de valor</h3><p>Narrativa, música y juego en un mismo recorrido para despertar la curiosidad y la participación.</p></article></div>
+          <div class="col"><article class="h-100"><span class="escuela-icono" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 23v-6a4 4 0 0 1 4-4h6a4 4 0 0 0 0-8h-1"/><circle cx="5" cy="23" r="2"/><path d="m10 3 4 2-4 2M19 23v-7M16 19l3-3 3 3"/></svg></span><h3>Ruta pedagógica</h3><p>Contenidos por niveles y módulos para organizar sesiones y acompañar distintos ritmos de aprendizaje.</p></article></div>
+          <div class="col"><article class="h-100"><span class="escuela-icono" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 11-6 11 6-11 6-11-6Z"/><path d="M7 13v7c4 3 10 3 14 0v-7M25 10v9"/></svg></span><h3>Licencias institucionales</h3><p>La implementación para colegios se define según sus grupos y necesidades. Consulta la propuesta para tu institución.</p></article></div>
         </div>
         <div class="escuelas-accion"><a class="fase3-boton" href="#contacto">Solicitar información</a></div>
       </div>
@@ -104,6 +108,7 @@
     </section>
   </main>
   <footer class="fase3-footer"><div class="fase3-contenedor"><strong>Academia Mariachitos</strong><nav aria-label="Menú del pie de página"><a href="#conoce">Conoce la academia</a><a href="#contenido">Contenido</a><a href="#escuelas">Escuelas</a><a href="#contacto">Contacto</a></nav><small>© 2026 Academia Mariachitos</small></div></footer>
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
   <script src="vendor/aos/aos.js" defer></script>
   <script src="programa.js?v=fase4-20261015" defer></script>
   <script src="fase4.js?v=fase4-20261015" defer></script>

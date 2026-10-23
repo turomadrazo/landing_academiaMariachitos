@@ -255,3 +255,25 @@ html:not(.aos-disponible) [data-aos] { opacity: 1 !important; transform: none !i
 @media (prefers-reduced-motion: reduce) {
   [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+/* Fase 5: Bootstrap aporta Collapse y la cuadrícula responsive. */
+body { line-height: normal; }
+h1,h2,h3,h4 { color: inherit; }
+.mariachitos-navbar { flex-direction: row; flex-wrap: wrap; }
+.mariachitos-navbar .navbar-collapse { flex-grow: 0; }
+.mariachitos-navbar .navbar-toggler { color: var(--azul); border-color: #05264c40; }
+.fase3-escuelas-grid.row { display: flex; gap: 0; margin-inline: -12px; }
+.fase3-escuelas-grid.row > .col { padding-inline: 12px; }
+.fase3-escuelas-grid article { margin: 0; }
+.fase3-escuelas-grid > .col:nth-child(2) article { background:#eff8ff; border-top-color:#2382bd; }
+.fase3-escuelas-grid > .col:nth-child(3) article { background:#f5f0ff; border-top-color:#8861bb; }
+.fase3-escuelas-grid > .col:nth-child(2) .escuela-icono { background:#cfeeff; color:#12658e; }
+.fase3-escuelas-grid > .col:nth-child(3) .escuela-icono { background:#e8d9ff; color:#684399; }
+@media (max-width: 991.98px) {
+  .mariachitos-navbar { flex-direction: row; justify-content: space-between; }
+  .mariachitos-navbar .logo { flex: 0 1 240px; width: 240px; height: 68px; }
+  .mariachitos-navbar .navbar-collapse { flex-basis: 100%; }
+  .mariachitos-navbar nav { flex-direction: column; align-items: stretch; gap: 0; padding-top: 16px; }
+  .mariachitos-navbar nav a { padding: 12px 4px; font-size: 14px; }
+}
+@media (max-width: 380px) { .mariachitos-navbar .logo { flex-basis: 200px; width: 200px; } }
